@@ -1,0 +1,11 @@
+﻿<h1>Hi {{currentUser.firstName}}!</h1>
+<p>You're logged in into NSC Employee Portal</p>
+<h3>All registered Employee nformation:</h3>
+<ul>
+    <li *ngFor="let user of users">
+        <!--<a (click)="{{user.username}} ({{user.firstName}} {{user.lastName}})"-->
+            <a target="_blank" rel="noopener" [routerLink]="['/empdetail']" >Solay Solayappan</a>     
+        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+    </li>
+</ul>
+<p><a [routerLink]="['/login']">Logout</a></p>
